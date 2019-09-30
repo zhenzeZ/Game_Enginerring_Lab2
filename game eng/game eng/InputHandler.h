@@ -14,7 +14,9 @@ public:
 	//method to bind commands
 	void handleInput();
 
-	sf::String getText() { return m_currentText; }
+	std::string getText() {
+		return "";
+	}//macro->getChar(); }
 private:
 	Command* buttonQ;
 	Command* buttonU;
@@ -24,8 +26,7 @@ private:
 	Command* buttonY;
 
 	MacroCommand * macro;
-	std::vector<Command*> commands;
+	//std::vector<Command*> commands;
 
-	sf::String m_currentText = "";
 };
 

@@ -1,7 +1,7 @@
+#pragma once
 #include "Command.h"
-#include <iostream>
-#include <list>
-#include <vector>
+
+
 class MacroCommand : public Command
 {
 public:
@@ -12,10 +12,11 @@ public:
 	virtual void execute();
 	virtual void undo();
 	virtual void redo();
+	//virtual std::string getChar();
 
 private:
 	std::list<Command*> commands;
 	std::list<Command*> redoCommands;
-
-	
+	std::list<Command*> emptyCommands;
+	std::string m_currentText = "";
 };

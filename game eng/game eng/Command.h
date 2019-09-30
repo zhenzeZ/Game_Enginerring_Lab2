@@ -10,6 +10,8 @@ public:
 	virtual void execute() = 0;
 	virtual void undo() = 0;
 	virtual void redo() = 0;
+	//virtual std::string getChar() = 0;
+
 protected:
 	Command() {}
 
@@ -29,22 +31,28 @@ public:
 	{
 		std::cout << "Redo Q" << std::endl;
 	};
+	/*virtual std::string getChar() override {
+		return "Q";
+	}*/
 };
 
-class WCommand : public Command {
+class UCommand : public Command {
 public:
 	virtual void execute() override
 	{
-		std::cout << "W";
+		std::cout << "U";
 	}
 	virtual void undo() override
 	{
-		std::cout << "Undo W" << std::endl;
+		std::cout << "Undo U" << std::endl;
 	}
 	virtual void redo() override
 	{
-		std::cout << "Redo W" << std::endl;
+		std::cout << "Redo U" << std::endl;
 	};
+	/*virtual std::string getChar() override {
+		return "U";
+	}*/
 };
 
 class ECommand : public Command {
@@ -61,6 +69,9 @@ public:
 	{
 		std::cout << "Redo E" << std::endl;
 	};
+	/*virtual std::string getChar() override {
+		return "E";
+	}*/
 };
 
 class RCommand : public Command {
@@ -76,7 +87,10 @@ public:
 	virtual void redo() override
 	{
 		std::cout << "Redo R" << std::endl;
-	};
+	}
+	/*virtual std::string getChar() override {
+		return "R";
+	}*/
 };
 
 class TCommand : public Command {
@@ -93,6 +107,9 @@ public:
 	{
 		std::cout << "Redo T" << std::endl;
 	};
+	/*virtual std::string getChar() override {
+		return "T";
+	}*/
 };
 
 class YCommand : public Command {
@@ -110,4 +127,7 @@ public:
 	{
 		std::cout << "Redo Y" << std::endl;
 	};
+	/*virtual std::string getChar() override {
+		return "Y";
+	}*/
 };

@@ -3,7 +3,7 @@
 InputHandler::InputHandler()
 {
 	buttonQ = new QCommand();
-	buttonU = new WCommand();
+	buttonU = new UCommand();
 	buttonE = new ECommand();
 	buttonR = new RCommand();
 	buttonT = new TCommand();
@@ -26,7 +26,6 @@ void InputHandler::handleInput()
 		//cout << "Key Q is Pressed" << endl;
 		buttonQ->execute();
 		macro->add(buttonQ);
-		m_currentText += "Q";
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::U))
@@ -34,7 +33,6 @@ void InputHandler::handleInput()
 		//cout << "Key U is Pressed" << endl;
 		buttonU->execute();
 		macro->add(buttonU);
-		m_currentText += "U";
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::E))
@@ -42,7 +40,6 @@ void InputHandler::handleInput()
 		//cout << "Key E is Pressed" << endl;
 		buttonE->execute();
 		macro->add(buttonE);
-		m_currentText += "E";
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::R))
@@ -50,7 +47,6 @@ void InputHandler::handleInput()
 		//cout << "Key R is Pressed" << endl;
 		buttonR->execute();
 		macro->add(buttonR);
-		m_currentText += "R";
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::T))
@@ -58,7 +54,6 @@ void InputHandler::handleInput()
 		//cout << "Key T is Pressed" << endl;
 		buttonT->execute();
 		macro->add(buttonT);
-		m_currentText += "T";
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Y))
@@ -66,7 +61,6 @@ void InputHandler::handleInput()
 		//cout << "Key Y is Pressed" << endl;
 		buttonY->execute();
 		macro->add(buttonY);
-		m_currentText += "Y";
 	}
 	
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace))
